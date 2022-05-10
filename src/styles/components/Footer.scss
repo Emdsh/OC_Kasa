@@ -1,0 +1,27 @@
+@use '../components' as *;
+
+.footer {
+  background-color: color(dark);
+  text-align: center;
+  color: color(light);
+  padding: 1rem;
+  margin-top: 1.5rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 3rem;
+  }
+
+  &__logo {
+    margin: 2rem 0;
+    height: 2.5rem;
+    filter: brightness(100);
+  }
+
+  &__copyright {
+    margin-bottom: 2rem;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: .5rem;
+    }
+  }
+}
