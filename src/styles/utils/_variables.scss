@@ -1,0 +1,20 @@
+$color-primary: #ff6060;
+$color-light: #fff;
+$color-dark: #000;
+
+$colors: (
+  primary: (
+    base: $color-primary,
+  ),
+  light: (
+    base: $color-light,
+    darker: (
+      first: darken($color-light, 4),
+      second: darken($color-light, 11),
+      third: darken($color-light, 23),
+    ),
+  ),
+  dark: (
+    base: $color-dark,
+  ),
+)

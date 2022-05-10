@@ -1,0 +1,18 @@
+@use '../base/' as *;
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+a {
+  color: color(primary);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+*:focus {
+  outline-color: color(primary);
+}
