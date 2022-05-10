@@ -1,0 +1,40 @@
+@use '../components' as *;
+
+.header {
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    max-width: 35vw;
+
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      height: 2.5rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    &-item:not(:first-child) {
+      padding-left: 1rem;
+
+      @media only screen and (min-width: 768px) {
+        padding-left: 2.5rem;
+      }
+    }
+
+    &-link {
+      text-transform: uppercase;
+      font-size: .85rem;
+
+      @media only screen and (min-width: 768px) {
+        text-transform: initial;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
