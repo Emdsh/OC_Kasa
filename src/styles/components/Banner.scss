@@ -3,19 +3,20 @@
 .banner {
   height: 7rem;
 
-  @media only screen and (min-width: 768px) {
-    height: 14rem;
-  }
-
   background-position: center;
   background-size: cover;
   background-color: rgba(color(dark), .3);
   background-blend-mode: darken;
   
-  border-radius: 1rem;
+  border-radius: 1.25rem;
 
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: 768px) {
+    height: 14rem;
+    border-radius: 3rem;
+  }
 
   &.main {
     background-image: url("../../assets/images/main_banner_1200w.jpg");
