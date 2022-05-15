@@ -15,6 +15,10 @@
 
   @media only screen and (min-width: 768px) {
     height: 14rem;
+    border-radius: 2rem;
+  }
+
+  @media only screen and (min-width: 1440px) {
     border-radius: 3rem;
   }
 
