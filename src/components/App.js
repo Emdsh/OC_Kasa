@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
-import Banner from './Banner';
+import Banner from './Banner'
+import Portfolio from './Portfolio'
 
 function App() {
   return (
@@ -8,11 +9,12 @@ function App() {
       <div className='app'>
         <Header />
         <Banner />
+        <Portfolio />
       </div>
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

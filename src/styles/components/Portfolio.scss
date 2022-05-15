@@ -1,0 +1,78 @@
+@use '../components' as *;
+
+.portfolio {
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: stretch;
+
+    background-color: color(light, darker, first);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    grid-template: auto / repeat(3, 1fr);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    gap: 3.75rem;
+    padding: 3.75rem;
+    margin-top: 2.75rem;
+    border-radius: 3rem;
+  }
+
+  &__tile {
+    &__content {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      width: 100%;
+      height: 16rem;
+      margin-top: 1.5rem;
+
+      @media only screen and (min-width: 768px) {
+        aspect-ratio: 1/1;
+        margin-top: 0;
+        height: auto;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: color(primary);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__caption {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(color(dark), .5), rgba(color(light), 0));
+    }
+
+    &__title {
+      color: color(light);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 1rem;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
