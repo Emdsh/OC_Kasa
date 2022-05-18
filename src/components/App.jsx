@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='app'>
         <Header />
-        <Banner />
+        <Banner page="main"/>
         <Portfolio />
 
         <div style={{height: '10px', background: '#000', margin: "20px 0"}}></div>
