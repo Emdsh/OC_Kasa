@@ -6,8 +6,8 @@
   font-family: sans-serif;
 
   &:focus {
-    outline: #000 solid 2px;
-    border-radius: .25rem;
+    outline: hsl(0, 0%, 0%) solid 2px;
+    border-radius: 0.25rem;
   }
 }
 
@@ -21,7 +21,7 @@ ul, ol {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: hsl(0, 0%, 0%);
   display: block;
 }
 

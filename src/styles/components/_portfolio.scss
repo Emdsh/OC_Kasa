@@ -63,7 +63,7 @@
       bottom: 0;
       top: 0;
       width: 100%;
-      background: linear-gradient(to top, rgba(color(dark), .5), rgba(color(light), 0));
+      background: linear-gradient(to top, hslac(color(dark), 0.5), hslac(color(light), 0));
     }
 
     &__title {

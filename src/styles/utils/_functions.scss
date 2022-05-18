@@ -9,3 +9,7 @@
 
   @return $color;
 }
+
+@function hslac($color, $alpha) {
+  @return hsla(hue($color), saturation($color), lightness($color), $alpha)
+}
