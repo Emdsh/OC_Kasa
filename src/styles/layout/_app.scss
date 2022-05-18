@@ -1,3 +1,5 @@
+@use "../layout" as *;
+
 .app {
   max-width: 1440px;
   margin: auto;
@@ -6,11 +8,11 @@
 
   padding: 0 1.25rem;
 
-  @media only screen and (min-width: 768px) {
+  @include breakpoint("medium") {
     padding: 0 3.75rem;
   }
 
-  @media only screen and (min-width: 992px) {
+  @include breakpoint("large") {
     padding: 0 6.25rem;
   }
 }

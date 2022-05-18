@@ -1,24 +1,24 @@
-@use '../components' as *;
+@use "../components" as *;
 
 .banner {
   height: 7rem;
 
   background-position: center;
   background-size: cover;
-  background-color: hslac(color(dark), 0.3);
+  background-color: hslac(color("dark"), 0.3);
   background-blend-mode: darken;
-  
+
   border-radius: 1.25rem;
 
   display: flex;
   align-items: center;
 
-  @media only screen and (min-width: 768px) {
+  @include breakpoint("medium") {
     height: 14rem;
     border-radius: 2rem;
   }
 
-  @media only screen and (min-width: 1440px) {
+  @include breakpoint("max") {
     border-radius: 3rem;
   }
 
@@ -67,7 +67,7 @@
   }
 
   &__text {
-    color: color(light);
+    color: color("light");
     font-size: 1.5rem;
     margin: 0 1rem;
 
@@ -75,7 +75,7 @@
       margin: auto;
     }
 
-    @media only screen and (min-width: 768px) {
+    @include breakpoint("medium") {
       font-size: 3rem;
       margin: 0 2.5rem;
     }

@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-@function color($name, $shade: base, $degree: '') {
+@function color($name, $shade: 'base', $degree: '') {
   $color: map-get(map-get($colors, $name), $shade);
 
   @if $degree != '' {
@@ -11,5 +11,10 @@
 }
 
 @function hslac($color, $alpha) {
-  @return hsla(hue($color), saturation($color), lightness($color), $alpha)
+  @return hsla(hue($color), saturation($color), lightness($color), $alpha);
+}
+
+@function get-breakpoint($size) {
+  $width: map-get($breakpoints, $size);
+  @return '(min-width: #{$width})';
 }
