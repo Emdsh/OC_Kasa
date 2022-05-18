@@ -71,7 +71,7 @@
     font-size: 1.5rem;
     margin: 0 1rem;
 
-    @media only screen and (min-width: 426px) {
+    @include breakpoint(426px) {
       margin: auto;
     }
 
@@ -80,7 +80,7 @@
       margin: 0 2.5rem;
     }
 
-    @media only screen and (min-width: 906px) {
+    @include breakpoint(906px) {
       margin: auto;
     }
   }
