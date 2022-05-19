@@ -20,6 +20,6 @@
     @return '(min-width: #{$width})';
   }
   @if type-of($size) == number {
-    @return '(min-width: #{calc(#{$size} * 1px)})';
+    @return '(min-width: #{$size})';
   }
 }
