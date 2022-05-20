@@ -9,7 +9,7 @@ function App() {
     <>
       <div className='app'>
         <Header />
-        <Banner page="main"/>
+        <Banner page="main" title="Chez vous, partout et ailleurs"/>
         <Portfolio />
 
         <div style={{height: '10px', background: '#000', margin: "20px 0"}}></div>

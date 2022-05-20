@@ -1,9 +1,11 @@
 function Banner(props) {
+  const {page, title} = props;
+
   return (
-    //add extra className "main" or "about" to change background image
-    // remove <p> if about page
-    <div className={`banner ${props.page}`}>
-      <p className="banner__text">Chez vous, partout et ailleurs</p>
+    <div className={`banner ${page}`}>
+      {title &&
+        <p className="banner__text">{title}</p>
+      }
     </div>
   )
 }
