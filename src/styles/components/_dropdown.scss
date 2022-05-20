@@ -7,8 +7,12 @@
   &--large {
     max-width: 1024px;
     margin: auto;
-    font-size: 1.5rem;
-    margin-top: 2rem;
+    font-weight: 0.75rem;
+    margin-top: 1.25rem;
+    @include breakpoint('medium') {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
   }
 
   &__title {
@@ -16,8 +20,12 @@
     background-color: color('primary');
     color: color('light');
     font-weight: 500;
-    padding: 1rem 1.5rem;
-    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    @include breakpoint('medium') {
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+    }
     position: relative;
     z-index: 1;
     display: flex;
@@ -31,8 +39,12 @@
       font-weight: 900;
       text-rendering: auto;
       --webkit-font-smoothing: antialiased;
-      font-size: 1.5rem;
+      font-size: 0.75rem;
+      @include breakpoint('medium') {
+        font-size: 1.5rem
+      }
       transform: rotate(180deg);
+      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -41,12 +53,21 @@
     font-weight: 400;
     background-color: color('light', 'darker', 'I');
     color: color('primary');
-    padding: 3rem 1.5rem 1rem;
-    border-radius: 0.75rem;
+    padding: 1.5rem 0.75rem 0.5rem;
+    border-radius: 0.25rem;
+    top: -0.5rem;
+    margin-bottom: -0.5rem;
+    @include breakpoint('medium') {
+      padding: 3rem 1.5rem 1rem;
+      border-radius: 1rem;
+      top: -1rem;
+      margin-bottom: -1rem;
+    }
     position: relative;
-    top: -1rem;
     z-index: 0;
-    margin-bottom: -1rem;
+    line-height: 1.5;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -54,10 +75,18 @@
   .dropdown {
     &__title::after {
       transform: rotate(0);
+      transition: transform 0.3s ease-in-out;
     }
 
     &__content {
-      display: none;
+      padding: 0.5rem 0.75rem;
+      @include breakpoint('medium') {
+        padding: 0.5rem 1.5rem;
+      }
+      line-height: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      margin-bottom: -1rem;
     }
   }
 }
