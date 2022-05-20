@@ -6,7 +6,11 @@ function Portfolio() {
 
   const listItems = [];
   for (let i = 0; i < 7; i += 1) {
-    listItems.push(<li key={`li-${i}`}><PortfolioTile image={image} title={title} /></li>)
+    listItems.push(
+      <li key={`li-${i}`}>
+        <PortfolioTile image={image} title={title} />
+      </li>
+    )
   }
 
   return (
