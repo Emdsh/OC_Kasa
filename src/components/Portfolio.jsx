@@ -1,5 +1,5 @@
 import image from '../assets/images/about_banner_1440w.jpg'
-import PortfolioTile from './PortfolioTile'
+import Thumb from './Thumb'
 
 function Portfolio() {
   const title = 'Titre de la location';
@@ -8,7 +8,7 @@ function Portfolio() {
   for (let i = 0; i < 7; i += 1) {
     listItems.push(
       <li key={`li-${i}`}>
-        <PortfolioTile image={image} title={title} />
+        <Thumb image={image} title={title} />
       </li>
     )
   }
