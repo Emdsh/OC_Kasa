@@ -1,0 +1,21 @@
+@use '../components/' as *;
+
+.tag {
+  min-width: 5.25rem;
+  height: 1rem;
+  background: color('primary');
+  color: color('light');
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint('medium') {
+    min-width: 7.25rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+}

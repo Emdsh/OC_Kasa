@@ -1,0 +1,58 @@
+@use '../components/' as *;
+
+.listing-details {
+  margin-top: 1rem;
+  display: grid;
+  grid: repeat(3, auto) / repeat(2, 1fr);
+  grid-template-areas: 
+    "title title"
+    "tags tags"
+    "rating host";
+
+  @include breakpoint('medium') {
+    margin-top: 2.5rem;
+    grid: repeat(2, auto) / repeat(2, auto);
+    grid-template-areas: 
+    "title host"
+    "tags rating";
+  }
+
+    &__title {
+      grid-area: title;
+      color: color('primary');
+    }
+
+    &__tags {
+      grid-area: tags;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    & .rating {
+      grid-area: rating;
+    }
+
+    & .host {
+      grid-area: host;
+    }
+
+    &__name {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+
+      @include breakpoint('medium') {
+        font-size: 2.25rem;
+      }
+    }
+
+    &__location {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+
+      @include breakpoint('medium') {
+        font-size: 1.25rem;
+        margin: 0.25rem 0;
+      }
+    }
+}

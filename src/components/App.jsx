@@ -5,6 +5,7 @@ import Portfolio from './Portfolio'
 import Error404 from './Error404'
 import Dropdown from './Dropdown'
 import Carousel from './Carousel'
+import ListingDetails from './ListingDetails'
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
 
         <Header />
         <Carousel />
+        <main>
+          <ListingDetails />
+        </main>
       </div>
 
       <Footer />

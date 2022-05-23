@@ -1,0 +1,32 @@
+@use '../components/' as *;
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  margin: 0.5rem 0;
+
+  @include breakpoint('medium') {
+  justify-content: end;
+  gap: 0.75rem;
+  }
+}
+
+.star::after {
+  display: block;
+  content: '\f005';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  text-rendering: auto;
+  --webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  color: color('light', 'darker', 'II');
+
+  @include breakpoint('medium') {
+    font-size: 2rem;
+  }
+}
+
+.full.star::after {
+  color: color('primary');
+}
