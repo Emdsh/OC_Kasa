@@ -1,17 +1,35 @@
 @use "../components" as *;
 
 .thumb {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  margin-top: 1.5rem;
+
+  @include breakpoint("medium") {
+    margin-top: 0;
+  }
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0.25rem 0.5rem color("dark");
+    @include breakpoint("medium") {
+      transform: scale(1.075);
+      transition: transform 0.3s ease-in-out;
+    }
+    @include breakpoint("huge") {
+      transform: scale(1.1);
+    }
+  }
+  
   &__content {
     position: relative;
     overflow: hidden;
-    border-radius: 1.25rem;
     width: 100%;
     height: 16rem;
-    margin-top: 1.5rem;
 
     @include breakpoint("medium") {
       aspect-ratio: 1/1;
-      margin-top: 0;
       height: auto;
     }
   }
