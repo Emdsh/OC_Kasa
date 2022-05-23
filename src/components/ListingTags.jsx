@@ -1,11 +1,13 @@
 import Tag from './Tag'
 
-function ListingTags() {
+function ListingTags(props) {
+  const { tags } = props
+
   return (
     <div className='listing-details__tags'>
-      <Tag content='Cozy'/>
-      <Tag content='Canal'/>
-      <Tag content='Paris 10'/>
+      {tags.map((tag, index) => 
+        <Tag key={`${tag}-${index}`} content={tag} />
+      )}
     </div>
   )
 }

@@ -1,8 +1,10 @@
-function ListingTitle() {
+function ListingTitle(props) {
+  const {title, location} = props
+
   return (
     <div className="listing-details__title">
-      <h1 className="listing-details__name">Cozy loft on the Canal Saint-Martin</h1>
-      <p className="listing-details__location">Paris, Île-de-France</p>
+      <h1 className="listing-details__name">{title}</h1>
+      <p className="listing-details__location">{location}</p>
     </div>
   )
 }
