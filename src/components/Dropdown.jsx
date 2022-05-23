@@ -5,7 +5,7 @@ function Dropdown(props) {
   const [isDropdownOpen, setDropdownState] = useState(false)
 
   return (
-    <article className={`drowpdown ${type === 'large' ? 'dropdown--large' : ''} ${isDropdownOpen ? '' : 'closed'}`}>
+    <article className={`dropdown ${type === 'large' ? 'dropdown--large' : ''} ${isDropdownOpen ? '' : 'closed'}`}>
       <span onClick={() => setDropdownState(!isDropdownOpen)}>
         <h2 className="dropdown__title">{title}</h2>
       </span>

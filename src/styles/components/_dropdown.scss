@@ -1,17 +1,19 @@
 @use '../components/' as *;
 
 .dropdown {
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  width: 100%;
+
+  @include breakpoint('medium') {
+    font-size: 1.25rem;
+  }
 
   &--large {
     max-width: 1024px;
-    margin: auto;
-    font-weight: 0.75rem;
-    margin-top: 1.25rem;
     @include breakpoint('medium') {
       font-size: 1.5rem;
-      margin-top: 2rem;
+      margin: 2rem auto 0;
     }
   }
 
