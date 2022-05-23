@@ -1,0 +1,76 @@
+@use '../components/' as *;
+
+.carousel {
+  height: 16rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint('medium') {
+    height: 26rem;
+  }
+
+  &__image { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__caption {
+    position: relative;
+    top: -1.75rem;
+    color: color(light);
+    font-size: 0.5rem;
+    text-align: center;
+    
+    @include breakpoint('medium') {
+      font-size: 1rem;
+      top: -3.5rem;
+    }
+  }
+
+  &__navigation {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+
+    &::before, &::after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      text-rendering: auto;
+      --webkit-font-smoothing: antialiased;
+      font-size: 1.25rem;
+      color: color(light);
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      @include breakpoint('medium') {
+        font-size: 4.5rem;
+        padding: 1.5rem;
+      }
+    }
+  
+    &::before {
+      content: '\f053';
+      background: linear-gradient(
+       to left,
+       hslac(color(dark), 0),
+       hslac(color(dark), 0.1) 
+      );
+    }
+
+    &::after {
+      content: '\f054';
+      background: linear-gradient(
+       to right,
+       hslac(color(dark), 0),
+       hslac(color(dark), 0.1) 
+      );
+    }
+  }
+}

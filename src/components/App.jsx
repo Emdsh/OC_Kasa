@@ -4,6 +4,7 @@ import Banner from './Banner'
 import Portfolio from './Portfolio'
 import Error404 from './Error404'
 import Dropdown from './Dropdown'
+import Carousel from './Carousel'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <div style={{height: '10px', background: '#000', margin: "20px 0"}}></div>
 
         <Header />
+        <Carousel />
       </div>
 
       <Footer />
