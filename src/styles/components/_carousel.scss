@@ -48,38 +48,51 @@
     position: absolute;
     top: 0;
 
-    &::before, &::after {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      text-rendering: auto;
-      --webkit-font-smoothing: antialiased;
-      font-size: 1.25rem;
-      color: color(light);
-      padding: 0.5rem;
-      display: flex;
-      align-items: center;
+    &--backward, &--forward {
+      height: 100%;
 
-      @include breakpoint('medium') {
-        font-size: 4.5rem;
-        padding: 1.5rem;
+      &::before {
+        height: 95%;
+        width: 100%;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        text-rendering: auto;
+        --webkit-font-smoothing: antialiased;
+        font-size: 1.25rem;
+        color: color(light);
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+  
+        @include breakpoint('medium') {
+          font-size: 4.5rem;
+          padding: 1.5rem;
+          height: 88.5%;
+        }
       }
+      
     }
   
-    &::before {
-      content: '\f053';
+    &--backward {
+      &::before {
+        content: '\f053';
+      }
       background: linear-gradient(
        to left,
-       hslac(color(dark), 0),
-       hslac(color(dark), 0.1) 
+       hslac(color('dark'), 0),
+       hslac(color('dark'), 0.1) 
       );
     }
 
-    &::after {
-      content: '\f054';
+    &--forward {
+      &::before {
+        content: '\f054';
+      }
       background: linear-gradient(
        to right,
-       hslac(color(dark), 0),
-       hslac(color(dark), 0.1) 
+       hslac(color('dark'), 0),
+       hslac(color('dark'), 0.1) 
       );
     }
   }
