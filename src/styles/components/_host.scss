@@ -8,8 +8,9 @@
   margin: 0.5rem 0;
 
   @include breakpoint('medium') {
-    margin: 0;
-    align-items: unset;
+    margin: 0.75rem 0;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 
   &__profile-picture {
@@ -39,11 +40,20 @@
   &__name {
     color: color('primary');
     line-height: 1.5;
-    max-width: 6.25rem;
+    max-width: 5rem;
     text-align: end;
+    margin-left: 1rem;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
 
     @include breakpoint('medium') {
-      max-width: 12.5rem
+      max-width: 10rem;
+      margin-left: 2rem;
     }
   }
 }

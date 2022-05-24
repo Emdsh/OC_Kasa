@@ -12,57 +12,62 @@
 
   @include breakpoint('medium') {
     margin-top: 2.5rem;
-    grid: repeat(3, auto) / repeat(2, auto);
+    grid: repeat(3, auto) / auto 17rem;
     grid-template-areas: 
     "title host"
     "tags rating"
     "dropdowns dropdowns";
   }
 
-    &__title {
-      grid-area: title;
-      color: color('primary');
-    }
+  &__text {
+    grid-area: title;
+    color: color('primary');
+  }
 
-    &__tags {
-      grid-area: tags;
-      display: flex;
-      gap: 0.75rem;
+  &__tags {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.75rem;
+    margin: 0.25rem 0;
+    @include breakpoint('medium') {
+      margin: 0.75rem 0;
     }
+  }
 
-    & .rating {
-      grid-area: rating;
+  & .rating {
+    grid-area: rating;
+  }
+
+  & .host {
+    grid-area: host;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    @include breakpoint('medium') {
+      font-size: 2.25rem;
     }
+  }
 
-    & .host {
-      grid-area: host;
-    }
+  &__location {
+    font-size: 1rem;
+    margin: 0.5rem 0;
 
-    &__dropdowns {
-      grid-area: dropdowns;
-      @include breakpoint('large') {
-        display: flex;
-        gap: 4.75rem;
-      }
-    }
-
-    &__name {
+    @include breakpoint('medium') {
       font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.5;
-
-      @include breakpoint('medium') {
-        font-size: 2.25rem;
-      }
+      margin: 0.25rem 0;
     }
+  }
 
-    &__location {
-      font-size: 1rem;
-      margin: 0.5rem 0;
-
-      @include breakpoint('medium') {
-        font-size: 1.25rem;
-        margin: 0.25rem 0;
-      }
+  &__dropdowns {
+    grid-area: dropdowns;
+    @include breakpoint('large') {
+      display: flex;
+      gap: 4.75rem;
     }
+  }
 }
