@@ -17,6 +17,10 @@
     }
   }
 
+  & span:focus .dropdown__title {
+    background-color: color('primary', 'darker');
+  }
+
   &__title {
     font-size: inherit;
     background-color: color('primary');
