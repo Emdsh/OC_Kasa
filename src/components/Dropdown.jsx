@@ -10,7 +10,10 @@ function Dropdown(props) {
         <h2 className="dropdown__title">{title}</h2>
       </span>
       <div className="dropdown__content">
-        <p>{content}</p>
+        {Array.isArray(content) 
+          ? <ul>{content.map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ul> 
+          : <p>{content}</p>
+        }
       </div>
     </article>
   )
