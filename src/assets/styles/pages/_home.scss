@@ -1,7 +1,8 @@
 @use '../components/header';
 @use '../components/footer';
 @use '../components/banner';
-@use '../components/portfolio';
 @use '../components/thumb';
 
-@use '../layout/app';
+@use '../layouts/portfolio';
+
+@use './app';

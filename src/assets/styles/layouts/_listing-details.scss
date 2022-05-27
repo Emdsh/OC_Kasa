@@ -1,22 +1,22 @@
-@use '../components/' as *;
+@use '../layouts' as *;
 
 .listing-details {
   margin-top: 1rem;
   display: grid;
   grid: repeat(4, auto) / repeat(2, 1fr);
-  grid-template-areas: 
-    "title title"
-    "tags tags"
-    "rating host"
-    "dropdowns dropdowns";
+  grid-template-areas:
+    'title title'
+    'tags tags'
+    'rating host'
+    'dropdowns dropdowns';
 
   @include breakpoint('medium') {
     margin-top: 2.5rem;
     grid: repeat(3, auto) / auto 17rem;
-    grid-template-areas: 
-    "title host"
-    "tags rating"
-    "dropdowns dropdowns";
+    grid-template-areas:
+      'title host'
+      'tags rating'
+      'dropdowns dropdowns';
   }
 
   &__text {

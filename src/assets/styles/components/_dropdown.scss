@@ -47,7 +47,7 @@
       --webkit-font-smoothing: antialiased;
       font-size: 0.75rem;
       @include breakpoint('medium') {
-        font-size: 1.5rem
+        font-size: 1.5rem;
       }
       transform: rotate(180deg);
       transition: transform 0.3s ease-in-out;

@@ -1,7 +1,7 @@
-@use "../components" as *;
+@use '../components' as *;
 
 .error {
-  color: color("primary");
+  color: color('primary');
 
   &__content {
     display: flex;
@@ -14,7 +14,7 @@
     font-weight: 700;
     margin-top: 10rem;
 
-    @include breakpoint("large") {
+    @include breakpoint('large') {
       font-size: 18rem;
       margin-top: 5rem;
     }
@@ -26,7 +26,7 @@
     margin: 1rem;
     text-align: center;
 
-    @include breakpoint("large") {
+    @include breakpoint('large') {
       font-size: 2.25rem;
     }
   }
@@ -35,7 +35,7 @@
     font-size: 1rem;
     margin-top: 7rem;
 
-    @include breakpoint("large") {
+    @include breakpoint('large') {
       margin-top: 10rem;
     }
   }

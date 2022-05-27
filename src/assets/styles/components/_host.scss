@@ -27,7 +27,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       background-color: color('light', 'darker', 'III');
       position: absolute;

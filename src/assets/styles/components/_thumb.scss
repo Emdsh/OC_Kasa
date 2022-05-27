@@ -1,12 +1,13 @@
-@use "../components" as *;
+@use '../components' as *;
 
-.thumb:hover, a:focus .thumb {
-  box-shadow: 0 0.25rem 0.5rem color("dark");
-  @include breakpoint("medium") {
+.thumb:hover,
+a:focus .thumb {
+  box-shadow: 0 0.25rem 0.5rem color('dark');
+  @include breakpoint('medium') {
     transform: scale(1.075);
     transition: transform 0.3s ease-in-out;
   }
-  @include breakpoint("huge") {
+  @include breakpoint('huge') {
     transform: scale(1.1);
   }
 }
@@ -16,19 +17,19 @@
   overflow: hidden;
   margin-top: 1.5rem;
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     margin-top: 0;
   }
 
   transition: transform 0.3s ease-in-out;
-  
+
   &__content {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 16rem;
 
-    @include breakpoint("medium") {
+    @include breakpoint('medium') {
       aspect-ratio: 1/1;
       height: auto;
     }
@@ -41,9 +42,9 @@
     object-position: center;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
-      background-color: color("primary");
+      background-color: color('primary');
       position: absolute;
       top: 0;
       width: 100%;
@@ -58,13 +59,13 @@
     width: 100%;
     background: linear-gradient(
       to top,
-      hslac(color("dark"), 0.5),
-      hslac(color("light"), 0)
+      hslac(color('dark'), 0.5),
+      hslac(color('light'), 0)
     );
   }
 
   &__title {
-    color: color("light");
+    color: color('light');
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;

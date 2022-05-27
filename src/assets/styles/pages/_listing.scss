@@ -2,9 +2,10 @@
 @use '../components/footer';
 @use '../components/dropdown';
 @use '../components/carousel';
-@use '../components/listing-details';
 @use '../components/tag';
 @use '../components/rating';
 @use '../components/host';
 
-@use '../layout/app';
+@use '../layouts/listing-details';
+
+@use './app';

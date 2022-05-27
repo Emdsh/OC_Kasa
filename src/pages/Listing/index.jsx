@@ -1,5 +1,5 @@
 import Carousel from '../../components/Carousel'
-import ListingDetails from '../../layout/ListingDetails'
+import ListingDetails from '../../layouts/ListingDetails'
 
 function Listing() {
   return (

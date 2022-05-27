@@ -1,16 +1,16 @@
-@use "../base/" as *;
+@use '../base/' as *;
 
 body {
   font-size: 0.75rem;
   font-weight: 500;
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     font-size: 1.5rem;
   }
 }
 
 a {
-  color: color("primary");
+  color: color('primary');
 
   &:hover {
     text-decoration: underline;
@@ -18,5 +18,5 @@ a {
 }
 
 *:focus {
-  outline-color: color("primary");
+  outline-color: color('primary');
 }

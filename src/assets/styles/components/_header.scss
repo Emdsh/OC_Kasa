@@ -1,4 +1,4 @@
-@use "../components" as *;
+@use '../components' as *;
 
 .header {
   display: flex;
@@ -6,14 +6,14 @@
   align-items: center;
   justify-content: space-between;
 
-  @include breakpoint("medium") {
+  @include breakpoint('medium') {
     padding: 3rem 0;
   }
 
   &__logo {
     height: 3rem;
 
-    @include breakpoint("medium") {
+    @include breakpoint('medium') {
       height: 4.25rem;
     }
   }
@@ -24,7 +24,7 @@
     &-item:not(:first-child) {
       margin-left: 1rem;
 
-      @include breakpoint("medium") {
+      @include breakpoint('medium') {
         margin-left: 2.5rem;
       }
     }
@@ -32,7 +32,7 @@
     &-link {
       text-transform: uppercase;
 
-      @include breakpoint("medium") {
+      @include breakpoint('medium') {
         text-transform: initial;
       }
     }
