@@ -1,6 +1,6 @@
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
-import ListingTags from './ListingTags'
+import ListingTags from '../ListingTags'
 import Dropdown from '../../components/Dropdown'
 
 function ListingDetails() {

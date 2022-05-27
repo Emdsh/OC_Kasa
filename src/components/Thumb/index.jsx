@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 function Thumb(props) {
   const { image, title } = props
 
   return (
-    <a href="./titre-de-la-location">
+    <Link to="/listing">
       <article className="thumb">
         <figure className="thumb__content">
           <img src={image} alt="" className="thumb__image" />
@@ -11,7 +13,7 @@ function Thumb(props) {
           </figcaption>
         </figure>
       </article>
-    </a>
+    </Link>
   )
 }
 

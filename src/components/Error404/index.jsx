@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Error404() {
   return (
     <main className="error">
@@ -6,9 +8,9 @@ function Error404() {
         <p className="error__description">
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <a href="./" className="error__link">
+        <Link to="/" className="error__link">
           Retourner sur la page d'accueil
-        </a>
+        </Link>
       </div>
     </main>
   )

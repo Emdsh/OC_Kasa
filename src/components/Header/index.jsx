@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 
 function Header() {
   return (
     <header className="header">
-      <a href="./">
+      <Link to='/'>
         <img src={logo} alt="Kasa" className="header__logo" />
-      </a>
+      </Link>
 
       <nav>
         <ul className="header__menu">
           <li className="header__menu-item">
-            <a href="./" className="header__menu-link">
+            <Link to='/' className="header__menu-link">
               Accueil
-            </a>
+            </Link>
           </li>
           <li className="header__menu-item">
-            <a href="./about" className="header__menu-link">
+            <Link to='/about' className="header__menu-link">
               À propos
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

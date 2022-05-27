@@ -1,4 +1,4 @@
-import image from '../../assets/images/about_banner_1440w.jpg'
+import image from '../../assets/images/about/about_banner_1440w.jpg'
 import Thumb from '../../components/Thumb'
 
 function Portfolio() {
