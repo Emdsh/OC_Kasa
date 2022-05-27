@@ -1,5 +1,5 @@
 function Thumb(props) {
-  const { image, title } = props;
+  const { image, title } = props
 
   return (
     <a href="./titre-de-la-location">
@@ -12,7 +12,7 @@ function Thumb(props) {
         </figure>
       </article>
     </a>
-  );
+  )
 }
 
-export default Thumb;
+export default Thumb

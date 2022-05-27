@@ -1,10 +1,10 @@
-import image from '../assets/images/about_banner_1440w.jpg'
-import Thumb from './Thumb'
+import image from '../../assets/images/about_banner_1440w.jpg'
+import Thumb from '../../components/Thumb'
 
 function Portfolio() {
-  const title = 'Titre de la location';
+  const title = 'Titre de la location'
 
-  const listItems = [];
+  const listItems = []
   for (let i = 0; i < 7; i += 1) {
     listItems.push(
       <li key={`li-${i}`}>
@@ -15,9 +15,7 @@ function Portfolio() {
 
   return (
     <main>
-      <ul className='portfolio'>
-        {listItems}
-      </ul>
+      <ul className="portfolio">{listItems}</ul>
     </main>
   )
 }
