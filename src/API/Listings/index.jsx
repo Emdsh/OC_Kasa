@@ -1,5 +1,7 @@
 import { useEffect, useState, createContext } from 'react'
 
+const { REACT_APP_API, REACT_APP_API_HOST } = process.env
+
 function API() {
   const [listingsData, setListingsData] = useState({})
   const [isDataLoading, setDataLoading] = useState(false)
@@ -9,17 +11,14 @@ function API() {
       try {
         setDataLoading(true)
 
-        const response = await fetch(
-          'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json',
-          {
-            method: 'GET',
-            headers: {
-              Host: 's3-eu-west-1.amazonaws.com',
-              Accept: '*/*',
-              'Content-Type': 'application/json',
-            },
-          }
-        )
+        const response = await fetch(REACT_APP_API, {
+          method: 'GET',
+          headers: {
+            Host: REACT_APP_API_HOST,
+            Accept: '*/*',
+            'Content-Type': 'application/json',
+          },
+        })
 
         const listingsData = await response.json()
         setListingsData(listingsData)
