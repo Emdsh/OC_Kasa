@@ -35,6 +35,10 @@
       @include breakpoint('medium') {
         text-transform: initial;
       }
+
+      &.underlined {
+        text-decoration: underline;
+      }
     }
   }
 }

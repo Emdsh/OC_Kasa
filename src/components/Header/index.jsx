@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 
 function Header() {
+  let location = useLocation().pathname
+
   return (
     <header className="header">
       <Link to='/'>
@@ -11,12 +13,12 @@ function Header() {
       <nav>
         <ul className="header__menu">
           <li className="header__menu-item">
-            <Link to='/' className="header__menu-link">
+            <Link to='/' className={`header__menu-link ${location === '/' ? 'underlined' : ''}`}>
               Accueil
             </Link>
           </li>
           <li className="header__menu-item">
-            <Link to='/about' className="header__menu-link">
+            <Link to='/about' className={`header__menu-link ${location === '/about' ? 'underlined' : ''}`}>
               À propos
             </Link>
           </li>
