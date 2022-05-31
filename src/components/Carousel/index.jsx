@@ -1,14 +1,12 @@
-import { useEffect, useState } from 'react'
-
-import { useContext } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { ListingsContext } from '../../API'
 
 function Carousel(props) {
   const { id } = props
-  const listings = useContext(ListingsContext)
+  const { listingData: listings, isDataLoading: loader } =
+    useContext(ListingsContext)
 
-  let carousel = ['']
-
+  let carousel = []
   if (listings.length >= 1) {
     listings.forEach((listing) => {
       if (listing.id === id.id) {
@@ -41,26 +39,32 @@ function Carousel(props) {
   })
 
   return (
-    <figure className="carousel">
-      <img src={carousel[imageIndex]} alt="" className="carousel__image" />
-      <figcaption className="carousel__caption">
-        <p>
-          {imageIndex + 1}/{carousel.length}
-        </p>
-      </figcaption>
-      {carousel.length > 1 && (
-        <div className="carousel__navigation">
-          <span
-            className="carousel__navigation--backward"
-            onClick={navigateBackward}
-          ></span>
-          <span
-            className="carousel__navigation--forward"
-            onClick={navigateForward}
-          ></span>
-        </div>
+    <>
+      {loader ? (
+        <div>Loading</div>
+      ) : (
+        <figure className="carousel">
+          <img src={carousel[imageIndex]} alt="" className="carousel__image" />
+          <figcaption className="carousel__caption">
+            <p>
+              {carousel.length > 0 ? imageIndex + 1 : 0}/{carousel.length}
+            </p>
+          </figcaption>
+          {carousel.length > 1 && (
+            <div className="carousel__navigation">
+              <span
+                className="carousel__navigation--backward"
+                onClick={navigateBackward}
+              ></span>
+              <span
+                className="carousel__navigation--forward"
+                onClick={navigateForward}
+              ></span>
+            </div>
+          )}
+        </figure>
       )}
-    </figure>
+    </>
   )
 }
 

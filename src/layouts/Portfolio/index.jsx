@@ -4,9 +4,10 @@ import { useContext } from 'react'
 import { ListingsContext } from '../../API'
 
 function Portfolio() {
-  const listings = useContext(ListingsContext)
-  const listItems = ['']
+  const { listingData: listings, isDataLoading: loader } =
+    useContext(ListingsContext)
 
+  const listItems = []
   if (listings.length >= 1) {
     listings.forEach((listing) =>
       listItems.push(
@@ -18,9 +19,15 @@ function Portfolio() {
   }
 
   return (
-    <main>
-      <ul className="portfolio">{listItems}</ul>
-    </main>
+    <>
+      {loader ? (
+        <div>Loading</div>
+      ) : (
+        <main>
+          <ul className="portfolio">{listItems}</ul>
+        </main>
+      )}
+    </>
   )
 }
 
