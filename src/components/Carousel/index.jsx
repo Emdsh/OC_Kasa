@@ -4,7 +4,7 @@ import Loader from '../../components/Loader'
 
 function Carousel(props) {
   const { id } = props
-  const { listingData: listings, isDataLoading: loader } =
+  const { listingsData: listings, isDataLoading: loader } =
     useContext(ListingsContext)
 
   let carousel = []

@@ -1,7 +1,7 @@
 import { useEffect, useState, createContext } from 'react'
 
 function API() {
-  const [listingData, setListingData] = useState({})
+  const [listingsData, setListingsData] = useState({})
   const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
@@ -21,8 +21,8 @@ function API() {
           }
         )
 
-        const listingData = await response.json()
-        setListingData(listingData)
+        const listingsData = await response.json()
+        setListingsData(listingsData)
       } catch (error) {
         console.error(error)
       } finally {
@@ -33,16 +33,16 @@ function API() {
     fetchListing()
   }, [])
 
-  return { listingData, isDataLoading }
+  return { listingsData, isDataLoading }
 }
 
 export const ListingsContext = createContext()
 
 export const ListingsProvider = ({ children }) => {
-  const listingAPI = API()
+  const listingsAPI = API()
 
   return (
-    <ListingsContext.Provider value={listingAPI}>
+    <ListingsContext.Provider value={listingsAPI}>
       {children}
     </ListingsContext.Provider>
   )

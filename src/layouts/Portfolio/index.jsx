@@ -5,7 +5,7 @@ import { ListingsContext } from '../../API/Listings'
 import Loader from '../../components/Loader'
 
 function Portfolio() {
-  const { listingData: listings, isDataLoading: loader } =
+  const { listingsData: listings, isDataLoading: loader } =
     useContext(ListingsContext)
 
   const listItems = []
