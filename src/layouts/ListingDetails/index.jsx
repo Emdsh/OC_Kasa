@@ -3,35 +3,42 @@ import Rating from '../../components/Rating'
 import ListingTags from '../ListingTags'
 import Dropdown from '../../components/Dropdown'
 
-function ListingDetails() {
+import { useContext } from 'react'
+import { ListingsContext } from '../../API'
+
+function ListingDetails(props) {
+  const { id } = props
+  const listings = useContext(ListingsContext)
+
+  let details = {}
+  if (listings.length >= 1) {
+    listings.forEach((listing) => {
+      if (listing.id === id.id) {
+        details = listing
+      }
+    })
+  }
+
   return (
     <>
       <section className="listing-details">
         <div className="listing-details__text">
           <h1 className="listing-details__title">
-            Cozy loft on the Canal Saint-Martin
+            {details.title}
           </h1>
-          <p className="listing-details__location">Paris, Île-de-France</p>
+          <p className="listing-details__location">{details.location}</p>
         </div>
-        <ListingTags tags={['Cozy', 'Canal', 'Paris 10']} />
-        <Rating rate="3" />
-        <Host name="Alexandre Dumas" />
+        <ListingTags tags={details.tags} />
+        <Rating rate={details.rating} />
+        <Host name={details.host.name} picture={details.host.picture} />
         <div className="listing-details__dropdowns">
           <Dropdown
             title="Description"
-            content="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). "
+            content={details.description}
           />
           <Dropdown
             title="Équipements"
-            content={[
-              'Climatisation',
-              'Wi-Fi',
-              'Cuisine',
-              'Espace de travail',
-              'Fer à repasser',
-              'Sèche-cheveux',
-              'Cintres',
-            ]}
+            content={details.equipments}
           />
         </div>
       </section>

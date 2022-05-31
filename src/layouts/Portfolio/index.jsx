@@ -1,15 +1,19 @@
-import image from '../../assets/images/about/about_banner_1440w.jpg'
 import Thumb from '../../components/Thumb'
 
-function Portfolio() {
-  const title = 'Titre de la location'
+import { useContext } from 'react'
+import { ListingsContext } from '../../API'
 
+function Portfolio() {
+  const listings = useContext(ListingsContext)
   const listItems = []
-  for (let i = 0; i < 7; i += 1) {
-    listItems.push(
-      <li key={`li-${i}`}>
-        <Thumb image={image} title={title} />
-      </li>
+
+  if (listings.length >= 1) {
+    listings.forEach((listing) =>
+      listItems.push(
+        <li key={listing.id}>
+          <Thumb cover={listing.cover} title={listing.title} id={listing.id} />
+        </li>
+      )
     )
   }
 

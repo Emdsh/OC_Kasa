@@ -1,12 +1,16 @@
 import Carousel from '../../components/Carousel'
 import ListingDetails from '../../layouts/ListingDetails'
 
+import { useParams } from 'react-router-dom'
+
 function Listing() {
+  let id = useParams()
+
   return (
     <>
-      <Carousel />
+      <Carousel id={id}/>
       <main>
-        <ListingDetails />
+        <ListingDetails  id={id}/>
       </main>
     </>
   )

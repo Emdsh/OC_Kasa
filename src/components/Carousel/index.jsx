@@ -1,11 +1,22 @@
 import { useEffect, useState } from 'react'
 
-import image from '../../assets/images/temp/temp_1440w.jpg'
-import image2 from '../../assets/images/home/home_banner_1440w.jpg'
-import image3 from '../../assets/images/about/about_banner_1440w.jpg'
+import { useContext } from 'react'
+import { ListingsContext } from '../../API'
 
-function Carousel() {
-  const carousel = [{ image }, { image2 }, { image }, { image3 }]
+function Carousel(props) {
+  const { id } = props
+  const listings = useContext(ListingsContext)
+
+  let carousel = ['']
+
+  if (listings.length >= 1) {
+    listings.forEach((listing) => {
+      if (listing.id === id.id) {
+        carousel = listing.pictures
+      }
+    })
+  }
+
   const [imageIndex, navigationClick] = useState(0)
 
   function navigateBackward() {
@@ -31,11 +42,7 @@ function Carousel() {
 
   return (
     <figure className="carousel">
-      <img
-        src={carousel[imageIndex].image}
-        alt=""
-        className="carousel__image"
-      />
+      <img src={carousel[imageIndex]} alt="" className="carousel__image" />
       <figcaption className="carousel__caption">
         <p>
           {imageIndex + 1}/{carousel.length}
