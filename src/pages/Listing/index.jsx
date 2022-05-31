@@ -1,5 +1,5 @@
 import Carousel from '../../components/Carousel'
-import ListingDetails from '../../layouts/ListingDetails'
+import ListingDetails from '../../layouts/Listing/Details'
 
 import { useParams } from 'react-router-dom'
 
@@ -8,9 +8,9 @@ function Listing() {
 
   return (
     <>
-      <Carousel id={id}/>
+      <Carousel id={id} />
       <main>
-        <ListingDetails  id={id}/>
+        <ListingDetails id={id} />
       </main>
     </>
   )

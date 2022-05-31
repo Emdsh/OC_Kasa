@@ -1,4 +1,4 @@
-import Tag from '../../components/Tag'
+import Tag from '../../../components/Tag'
 
 function ListingTags(props) {
   const { tags } = props

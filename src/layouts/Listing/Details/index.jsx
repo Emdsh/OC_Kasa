@@ -1,10 +1,10 @@
-import Host from '../../components/Host'
-import Rating from '../../components/Rating'
-import ListingTags from '../ListingTags'
-import Dropdown from '../../components/Dropdown'
+import Host from '../../../components/Host'
+import Rating from '../../../components/Rating'
+import ListingTags from '../Tags'
+import Dropdown from '../../../components/Dropdown'
 
 import { useContext } from 'react'
-import { ListingsContext } from '../../API'
+import { ListingsContext } from '../../../API'
 
 function ListingDetails(props) {
   const { id } = props
@@ -23,23 +23,15 @@ function ListingDetails(props) {
     <>
       <section className="listing-details">
         <div className="listing-details__text">
-          <h1 className="listing-details__title">
-            {details.title}
-          </h1>
+          <h1 className="listing-details__title">{details.title}</h1>
           <p className="listing-details__location">{details.location}</p>
         </div>
         <ListingTags tags={details.tags} />
         <Rating rate={details.rating} />
         <Host name={details.host.name} picture={details.host.picture} />
         <div className="listing-details__dropdowns">
-          <Dropdown
-            title="Description"
-            content={details.description}
-          />
-          <Dropdown
-            title="Équipements"
-            content={details.equipments}
-          />
+          <Dropdown title="Description" content={details.description} />
+          <Dropdown title="Équipements" content={details.equipments} />
         </div>
       </section>
     </>
