@@ -1,10 +1,11 @@
-import Banner from '../../components/Banner'
-import Portfolio from '../../layouts/Portfolio'
-
 import { useContext } from 'react'
-import { ListingsContext } from '../../API/Listings'
-import Loader from '../../components/Loader'
 import PropTypes from 'prop-types'
+
+import { ListingsContext } from '../../API/Listings'
+
+import Banner from '../../components/Banner'
+import Loader from '../../components/Loader'
+import Portfolio from '../../layouts/Portfolio'
 
 function Home() {
   const { isDataLoading: loader } = useContext(ListingsContext)

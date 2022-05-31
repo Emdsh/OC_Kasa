@@ -1,12 +1,13 @@
+import { useContext } from 'react'
+import PropTypes from 'prop-types'
+
+import { ListingsContext } from '../../../API/Listings'
+
+import Dropdown from '../../../components/Dropdown'
 import Host from '../../../components/Host'
+import Loader from '../../../components/Loader'
 import Rating from '../../../components/Rating'
 import ListingTags from '../Tags'
-import Dropdown from '../../../components/Dropdown'
-import Loader from '../../../components/Loader'
-
-import { useContext } from 'react'
-import { ListingsContext } from '../../../API/Listings'
-import PropTypes from 'prop-types'
 
 function ListingDetails(props) {
   const { id } = props

@@ -1,9 +1,10 @@
-import Thumb from '../../components/Thumb'
-
 import { useContext } from 'react'
-import { ListingsContext } from '../../API/Listings'
-import Loader from '../../components/Loader'
 import PropTypes from 'prop-types'
+
+import { ListingsContext } from '../../API/Listings'
+
+import Loader from '../../components/Loader'
+import Thumb from '../../components/Thumb'
 
 function Portfolio() {
   const { listingsData: listings, isDataLoading: loader } =

@@ -1,12 +1,12 @@
+import { useContext } from 'react'
+import { useParams } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
+import { ListingsContext } from '../../API/Listings'
+
 import Carousel from '../../components/Carousel'
 import ListingDetails from '../../layouts/Listing/Details'
-
-import { useParams } from 'react-router-dom'
-
-import { useContext } from 'react'
-import { ListingsContext } from '../../API/Listings'
 import Loader from '../../components/Loader'
-import PropTypes from 'prop-types'
 
 function Listing() {
   let id = useParams()

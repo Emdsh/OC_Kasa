@@ -1,7 +1,9 @@
 import { useEffect, useState, useContext } from 'react'
-import { ListingsContext } from '../../API/Listings'
-import Loader from '../../components/Loader'
 import PropTypes from 'prop-types'
+
+import { ListingsContext } from '../../API/Listings'
+
+import Loader from '../../components/Loader'
 
 function Carousel(props) {
   const { id } = props

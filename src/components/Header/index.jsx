@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/images/logo.svg'
 import PropTypes from 'prop-types'
+
+import logo from '../../assets/images/logo.svg'
 
 function Header() {
   let location = useLocation().pathname

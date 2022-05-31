@@ -1,5 +1,6 @@
-import Tag from '../../../components/Tag'
 import PropTypes from 'prop-types'
+
+import Tag from '../../../components/Tag'
 
 function ListingTags(props) {
   const { tags } = props
