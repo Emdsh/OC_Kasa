@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import logo from '../../assets/images/logo.svg'
 
 function Header() {
-  let location = useLocation().pathname
+  const location = useLocation().pathname
 
   return (
     <header className="header">

@@ -9,7 +9,7 @@ import ListingDetails from '../../layouts/Listing/Details'
 import Loader from '../../components/Loader'
 
 function Listing() {
-  let id = useParams()
+  const id = useParams()
   const { isDataLoading: loader } = useContext(ListingsContext)
 
   return (
