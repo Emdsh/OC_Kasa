@@ -1,0 +1,25 @@
+.loader {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+
+  &__image {
+    height: 10rem;
+    animation: flip 2s linear infinite;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scaleX(-1);
+  }
+  50% {
+    transform: scale(-1);
+  }
+  75% {
+    transform: scaleY(-1);
+  }
+}

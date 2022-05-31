@@ -2,6 +2,7 @@ import Thumb from '../../components/Thumb'
 
 import { useContext } from 'react'
 import { ListingsContext } from '../../API/Listings'
+import Loader from '../../components/Loader'
 
 function Portfolio() {
   const { listingData: listings, isDataLoading: loader } =
@@ -21,7 +22,7 @@ function Portfolio() {
   return (
     <>
       {loader ? (
-        <div>Loading</div>
+        <Loader />
       ) : (
         <main>
           <ul className="portfolio">{listItems}</ul>

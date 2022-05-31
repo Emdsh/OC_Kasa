@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from 'react'
 import { ListingsContext } from '../../API/Listings'
+import Loader from '../../components/Loader'
 
 function Carousel(props) {
   const { id } = props
@@ -41,7 +42,7 @@ function Carousel(props) {
   return (
     <>
       {loader ? (
-        <div>Loading</div>
+        <Loader />
       ) : (
         <figure className="carousel">
           <img src={carousel[imageIndex]} alt="" className="carousel__image" />

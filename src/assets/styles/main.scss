@@ -6,6 +6,8 @@
 @use './base/normalize';
 @use './base/typography';
 
+@use './components/loader';
+
 @use './pages/home';
 @use './pages/error-404';
 @use './pages/about';
