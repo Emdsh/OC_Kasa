@@ -4,7 +4,7 @@ function Rating(props) {
   const { rate } = props
 
   const rating = []
-  for (let i = 1; i < 6; i += 1) {
+  for (let i = 1; i <= 5; i += 1) {
     rating.push(
       <span
         key={`star-${i}`}
