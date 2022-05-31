@@ -3,6 +3,7 @@ import Thumb from '../../components/Thumb'
 import { useContext } from 'react'
 import { ListingsContext } from '../../API/Listings'
 import Loader from '../../components/Loader'
+import PropTypes from 'prop-types'
 
 function Portfolio() {
   const { listingsData: listings, isDataLoading: loader } =
@@ -30,6 +31,11 @@ function Portfolio() {
       )}
     </>
   )
+}
+
+Portfolio.propTypes = {
+  listings: PropTypes.array,
+  loader: PropTypes.bool
 }
 
 export default Portfolio

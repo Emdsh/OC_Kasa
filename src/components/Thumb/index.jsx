@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function Thumb(props) {
   const { cover, title, id } = props
@@ -15,6 +16,12 @@ function Thumb(props) {
       </article>
     </Link>
   )
+}
+
+Thumb.propTypes = {
+  cover: PropTypes.string,
+  title: PropTypes.string,
+  id: PropTypes.string
 }
 
 export default Thumb

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Host(props) {
   const { name, picture } = props
 
@@ -9,6 +11,11 @@ function Host(props) {
       </figcaption>
     </figure>
   )
+}
+
+Host.propTypes = {
+  name: PropTypes.string,
+  picture: PropTypes.string
 }
 
 export default Host

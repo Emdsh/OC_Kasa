@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Rating(props) {
   const { rate } = props
 
@@ -12,6 +14,10 @@ function Rating(props) {
   }
 
   return <div className="rating">{rating}</div>
+}
+
+Rating.propTypes = {
+  rate: PropTypes.number
 }
 
 export default Rating

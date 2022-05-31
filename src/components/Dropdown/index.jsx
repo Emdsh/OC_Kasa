@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 function Dropdown(props) {
   const { type, title, content } = props
@@ -40,6 +41,12 @@ function Dropdown(props) {
       </div>
     </article>
   )
+}
+
+Dropdown.propTypes = {
+  type: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 }
 
 export default Dropdown

@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from 'react'
 import { ListingsContext } from '../../API/Listings'
 import Loader from '../../components/Loader'
+import PropTypes from 'prop-types'
 
 function Carousel(props) {
   const { id } = props
@@ -67,6 +68,12 @@ function Carousel(props) {
       )}
     </>
   )
+}
+
+Carousel.propTypes = {
+  id: PropTypes.object,
+  listings: PropTypes.array,
+  loader: PropTypes.bool
 }
 
 export default Carousel

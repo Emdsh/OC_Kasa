@@ -4,6 +4,7 @@ import Portfolio from '../../layouts/Portfolio'
 import { useContext } from 'react'
 import { ListingsContext } from '../../API/Listings'
 import Loader from '../../components/Loader'
+import PropTypes from 'prop-types'
 
 function Home() {
   const { isDataLoading: loader } = useContext(ListingsContext)
@@ -20,6 +21,10 @@ function Home() {
       )}
     </>
   )
+}
+
+Home.propTypes = {
+  loader: PropTypes.bool
 }
 
 export default Home

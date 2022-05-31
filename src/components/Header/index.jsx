@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
+import PropTypes from 'prop-types'
 
 function Header() {
   let location = useLocation().pathname
@@ -26,6 +27,10 @@ function Header() {
       </nav>
     </header>
   )
+}
+
+Header.propTypes = {
+  location: PropTypes.string
 }
 
 export default Header

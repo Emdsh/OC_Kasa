@@ -6,6 +6,7 @@ import Loader from '../../../components/Loader'
 
 import { useContext } from 'react'
 import { ListingsContext } from '../../../API/Listings'
+import PropTypes from 'prop-types'
 
 function ListingDetails(props) {
   const { id } = props
@@ -32,7 +33,7 @@ function ListingDetails(props) {
             <p className="listing-details__location">{details?.location}</p>
           </div>
           {details?.tags && <ListingTags tags={details.tags} />}
-          {details?.rating && <Rating rate={details.rating} />}
+          {details?.rating && <Rating rate={parseInt(details.rating)} />}
           {details?.host && (
             <Host name={details.host.name} picture={details.host.picture} />
           )}
@@ -48,6 +49,12 @@ function ListingDetails(props) {
       )}
     </>
   )
+}
+
+ListingDetails.propTypes = {
+  id: PropTypes.object,
+  listings: PropTypes.array,
+  loader: PropTypes.bool
 }
 
 export default ListingDetails

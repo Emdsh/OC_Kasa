@@ -1,4 +1,5 @@
 import Tag from '../../../components/Tag'
+import PropTypes from 'prop-types'
 
 function ListingTags(props) {
   const { tags } = props
@@ -10,6 +11,10 @@ function ListingTags(props) {
       ))}
     </div>
   )
+}
+
+ListingTags.propTypes = {
+  tags: PropTypes.array
 }
 
 export default ListingTags
