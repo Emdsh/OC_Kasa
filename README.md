@@ -1,4 +1,40 @@
-# Getting Started with Create React App
+# Kasa
+
+## How to run the development environment
+
+### 1. Clone the project locally:
+HTTPS: `git clone https://github.com/Emdsh/OC_Kasa.git`
+SSH: `git clone git@github.com:Emdsh/OC_Kasa.git`
+
+### 2. Go to the `dev` branch
+`git checkout dev`
+
+### 3. Download all the dependencies
+`npm install` or `npm i`
+
+### 4. Prepare your browser
+As the project was developed with a JSON mockup of the back-end, and in order to take advantage of it without having to copy it locally, we need to temporarily disable CORS on our browser.
+
+We'll be using Chrome on Windows ([click here for more information](https://alfilatov.com/posts/run-chrome-without-cors/)):
+
+1. Create a new shortcut for Chrome
+2. Edit the target to be `"[PATH_TO_CHROME]\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp`
+3. Save
+
+It's recommended to rename the new shortcut to **`UNSAFE`** to not confuse the "safe" and "unsafe" shortcuts.
+
+**If Chrome is your default browser and is already running when you launch the project, you'll need to close it before launching the `UNSAFE` shortcut so CORS is effectively disabled.**
+
+You may run into an error when launching Chrome with the `UNSAFE` shortcut regarding the inability to write data to its temp directory, you can safely ignore it.
+
+CORS is automatically re-enabled once you close the "unsafe" browser and open Chrome again with a "safe" shortcut.
+
+### 5. Run `npm start`
+If the project doesn't automatically open in the browser, go to `http://localhost:3000/`
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -13,58 +49,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
