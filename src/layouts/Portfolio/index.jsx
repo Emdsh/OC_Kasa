@@ -5,7 +5,7 @@ import { ListingsContext } from '../../API'
 
 function Portfolio() {
   const listings = useContext(ListingsContext)
-  const listItems = []
+  const listItems = ['']
 
   if (listings.length >= 1) {
     listings.forEach((listing) =>

@@ -10,7 +10,7 @@ function ListingDetails(props) {
   const { id } = props
   const listings = useContext(ListingsContext)
 
-  let details = {}
+  let details = {title: '', location: '', tags: [''], rating: 0, host: [''], description: '', equipments: ['']}
   if (listings.length >= 1) {
     listings.forEach((listing) => {
       if (listing.id === id.id) {
