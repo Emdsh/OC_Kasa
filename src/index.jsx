@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './assets/styles/main.scss'
 
-import { ListingsProvider } from './API'
+import { ListingsProvider } from './API/Listings'
 
 import Header from './components/Header'
 import Footer from './components/Footer'

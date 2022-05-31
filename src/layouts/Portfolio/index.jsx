@@ -1,7 +1,7 @@
 import Thumb from '../../components/Thumb'
 
 import { useContext } from 'react'
-import { ListingsContext } from '../../API'
+import { ListingsContext } from '../../API/Listings'
 
 function Portfolio() {
   const { listingData: listings, isDataLoading: loader } =

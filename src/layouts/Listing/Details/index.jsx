@@ -4,7 +4,7 @@ import ListingTags from '../Tags'
 import Dropdown from '../../../components/Dropdown'
 
 import { useContext } from 'react'
-import { ListingsContext } from '../../../API'
+import { ListingsContext } from '../../../API/Listings'
 
 function ListingDetails(props) {
   const { id } = props

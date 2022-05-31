@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react'
-import { ListingsContext } from '../../API'
+import { ListingsContext } from '../../API/Listings'
 
 function Carousel(props) {
   const { id } = props
