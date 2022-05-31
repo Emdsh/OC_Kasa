@@ -3,7 +3,7 @@
 ## How to run the development environment
 
 ### 1. Clone the project locally:
-HTTPS: `git clone https://github.com/Emdsh/OC_Kasa.git`
+HTTPS: `git clone https://github.com/Emdsh/OC_Kasa.git`\
 SSH: `git clone git@github.com:Emdsh/OC_Kasa.git`
 
 ### 2. Go to the `dev` branch
@@ -15,7 +15,7 @@ SSH: `git clone git@github.com:Emdsh/OC_Kasa.git`
 ### 4. Prepare your browser
 As the project was developed with a JSON mockup of the back-end, and in order to take advantage of it without having to copy it locally, we need to temporarily disable CORS on our browser.
 
-We'll be using Chrome on Windows ([click here for more information](https://alfilatov.com/posts/run-chrome-without-cors/)):
+We'll be using Chrome on Windows ([click here for the guide's source](https://alfilatov.com/posts/run-chrome-without-cors/)):
 
 1. Create a new shortcut for Chrome
 2. Edit the target to be `"[PATH_TO_CHROME]\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp`
