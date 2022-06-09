@@ -8,9 +8,23 @@ import Carousel from '../../components/Carousel'
 import ListingDetails from '../../layouts/Listing/Details'
 import Loader from '../../components/Loader'
 
+import Error from '../Error'
+
 function Listing() {
   const id = useParams()
-  const { isDataLoading: loader } = useContext(ListingsContext)
+  const { listingsData: listings, isDataLoading: loader } =
+    useContext(ListingsContext)
+
+  let idMatch = false
+  if (listings.length >= 1) {
+    listings.forEach((listing) => {
+      if (listing.id === id.id) {
+        idMatch = true
+      }
+    })
+  }
+
+  if (!idMatch) return <Error />
 
   return (
     <>
@@ -30,7 +44,7 @@ function Listing() {
 
 Listing.propTypes = {
   id: PropTypes.string,
-  loader: PropTypes.bool
+  loader: PropTypes.bool,
 }
 
 export default Listing
