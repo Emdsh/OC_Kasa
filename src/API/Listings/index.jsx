@@ -1,6 +1,8 @@
 import { useEffect, useState, createContext } from 'react'
 
-const { REACT_APP_API, REACT_APP_API_HOST } = process.env
+import JSON from './mock/api.json'
+
+// const { REACT_APP_API, REACT_APP_API_HOST } = process.env
 
 function API() {
   const [listingsData, setListingsData] = useState({})
@@ -11,17 +13,20 @@ function API() {
       try {
         setDataLoading(true)
 
+        /*
         const response = await fetch(REACT_APP_API, {
           method: 'GET',
           headers: {
             Host: REACT_APP_API_HOST,
-            Accept: '*/*',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
           },
         })
 
         const listingsData = await response.json()
         setListingsData(listingsData)
+        */
+       setListingsData(JSON)
       } catch (error) {
         console.error(error)
       } finally {
